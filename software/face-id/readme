@@ -1,1 +1,1 @@
-
+The face-id.py script uses the Deepface library. To unlock the car the drone flies out of the vehicle and compares the picture of the users to the ones in the database. If it's a new user the drone saves the picure and generates a randem name to link the picture with. The inputpicture also gets analysed by emotion(age, gender, etnicity are also a possibility). I didn't get to it but I added this emotiondetection part so I could recommend music based on the users emotions. 
