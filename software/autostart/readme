@@ -1,2 +1,2 @@
 This is for autostarting a scripts on your Raspberry pi. You do need a gui on your rpi or it wont work. 
-Go to files on your rpi, pres right mouse and click on show hiddin. A folder named config should pop up. Open it. If there isn't a folder already named autostart create is. Paste the document autostart.desktop and change the path to the file you want to autorun. Reboot the rpi and it should autostart.
+Go to files on your rpi, press right mouse and click on show hiddin. A folder named config should pop up. Open it. If there isn't a folder already named autostart create is. Paste the document autostart.desktop and change the path to the file you want to autorun. Reboot the rpi and it should autostart.
