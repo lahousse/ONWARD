@@ -88,6 +88,8 @@ def left(pin, value):
        m_front(0)
        sleep(1)
        stop()
+    
+    
 @blynk.handle_event('write V3')
 def right(pin, value):
     #print(WRITE_EVENT_PRINT_MSG.format(pin, value))
@@ -134,12 +136,6 @@ def backwards(pin, value):
        m1(0, spd[0])
        sleep(1)
        stop()
-
-@blynk.handle_event('write V4') # We used pin v4 on the blynk app for steering control. Hence 'write V4'
-def write_virtual_pin_handler(pin, value):
-    print("value: ",float(value[0])) 
-    agent.userSteering = float(value[0]) #updates the AI's memory of steering angle
-    servoControl(float(value[0])) #changes the motors to appropriately turn based on the steering input
 
 @blynk.handle_event('write V6') # We used pin v2 on the blynk app for autonomous/learning control. Hence 'write V2'
 def write_virtual_pin_handler(pin, value):
