@@ -1,1 +1,1 @@
-
+With the motorcontrol.py script I send instruction from the Raspberry Pi to the motordrivers who control the motors. The motordrivers are equiped with 3 inputpins, ground, pwm and dir(direction). It's quite simple. The dir pin controls the direction so 0 or 1. The pwm pin controls how fast its switches on/off by which you can control the power. 
