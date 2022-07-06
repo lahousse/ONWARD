@@ -1,2 +1,2 @@
 To open the roof and to change the steering direction I used two lineaire actuators. These are amazing and can really deliver some power. The motor in the back I got from my school. The etiquette with the brand is gone but it's a 24V 225W dc motor. 
-All  the notors are hooked up to the motordrivers. Be sure to test every change in the software with the motors being dismounted. I didn't do this and a lineaire actuator broke one of my welds due to a software bug.
+All  the motors are hooked up to the motordrivers. Be sure to test every change in the software with the motors being dismounted. I didn't do this and a lineaire actuator broke one of my welds due to a software bug.
