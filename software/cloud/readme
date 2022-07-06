@@ -1,2 +1,2 @@
 Thingspeak(https://thingspeak.com/channels) is an amazing way to visualise and store data in real time. This platform is specefically made for IOT solutions. The temp.py scripts shows how you can send live data of the temperature of your raspberry pi to the thingspeak cloud and the sr.py scripts shows how to read data from the cloud. The interface picture shows how this data is visualised.
-One of the amazing things of Thingspeak is that they offer analytic tools for your data. For example what is the correlation between the tempeture of the battery with the performance. 
+One of the amazing things of Thingspeak is that they offer analytic tools for your data. For example what is the correlation between the tempeture of the battery and the performance. 
