@@ -2,7 +2,6 @@
 
 
 # library
-from sqlite3 import Time
 import RPi.GPIO as GPIO			       # RPi GPIO module
 from time import sleep			       # for the delays
 
@@ -12,21 +11,21 @@ GPIO.setwarnings(False)			# enable warning from GPIO
 
 # outputs
 AN1 = 19                # pwm pin dc motor 
-AN_front = 12			    	# pwm pin lineaire motor steering
-AN_roof = 13	     	   	# pwm pin lineaire motor roof
+AN_front = 12			# pwm pin lineaire motor steering
+AN_roof = 13	     	# pwm pin lineaire motor roof
 AN_led = 18             # pwm pin led
 DIG1 = 26               # digitale pin dc motor 
-DIG_front = 5				    # digitale pin lineaire motor steering
+DIG_front = 5		    # digitale pin lineaire motor steering
 DIG_roof = 6            # digitale pin led
 DIG_led = 17
 
 
 # setup GPIO
-GPIO.setup(AN1, GPIO.OUT)		      # pin as output
+GPIO.setup(AN1, GPIO.OUT)		  # pin as output
 GPIO.setup(AN_front, GPIO.OUT)    # =
 GPIO.setup(AN_roof, GPIO.OUT)     # =
 GPIO.setup(AN_led, GPIO.OUT)      # =
-GPIO.setup(DIG1, GPIO.OUT)		    # =
+GPIO.setup(DIG1, GPIO.OUT)		  # =
 GPIO.setup(DIG_front, GPIO.OUT)   # =
 GPIO.setup(DIG_roof, GPIO.OUT)    # =
 GPIO.setup(DIG_led, GPIO.OUT)     # =
@@ -37,19 +36,19 @@ pwm = 10000
 
 sleep(1)
 
-p1 = GPIO.PWM(AN1, pwm)		           # setup pwm M1
+p1 = GPIO.PWM(AN1, pwm)		         # setup pwm M1
 p_front = GPIO.PWM(AN_front, pwm)    # setup pwm M_front
-p_roof = GPIO.PWM(AN_roof, pwm)		   # setup pwm M_roof
-p_led = GPIO.PWM(AN_led, pwm)		     # setup pwm led
+p_roof = GPIO.PWM(AN_roof, pwm)		 # setup pwm M_roof
+p_led = GPIO.PWM(AN_led, pwm)		 # setup pwm led
 
 def m1(d, sp):
     if d == 0:
        GPIO.output(DIG1, GPIO.HIGH)		# 0 = backwards
-       p1.start(sp)				            # speed
+       p1.start(sp)				        # speed
  
     if d == 1:
        GPIO.output(DIG1, GPIO.LOW)		# 1 = forward
-       p1.start(sp)				            # speed
+       p1.start(sp)				        # speed
 
 
 
@@ -57,22 +56,22 @@ def m_front(d): # d(direction): 0 = left, 1 = right
     sp = 100
     if d == 0:
        GPIO.output(DIG_front, GPIO.HIGH)		# left
-       p_front.start(sp)				            # speed
+       p_front.start(sp)				        # speed
 
     if d == 1:
        GPIO.output(DIG_front, GPIO.LOW)		 # right
-       p_front.start(sp)				           # speed
+       p_front.start(sp)				     # speed
 
 
 def m_roof(d, delay):
     sp = 100
     if d == 1:
        GPIO.output(DIG_roof, GPIO.LOW)		# up (31 sec to fully open roof)
-       p_roof.start(sp)				            # speed
+       p_roof.start(sp)				        # speed
 
     if d == 0:
        GPIO.output(DIG_roof, GPIO.HIGH)		# down
-       p_roof.start(sp)				            # speed
+       p_roof.start(sp)				        # speed
 
     sleep(delay)
 
