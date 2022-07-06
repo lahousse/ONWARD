@@ -1,2 +1,5 @@
-Go to the picovoice website (https://console.picovoice.ai/) create an account and build a model. Porcupine is used to detect wakewords, the word you use so the voice assistant knows it needs to listen. Rhino is used for recognizing situation like open the roof,... 
+Go to the picovoice website (https://console.picovoice.ai/) create an account and build a model. The documentation for the picovoice platform can be found here(https://picovoice.ai/docs/). Porcupine is used to detect wakewords, the word you use so the voice assistant knows it needs to listen. Rhino is used for recognizing situation like open the roof,... 
 After building the models you can download these. For every wakeword and every situation you will need a different file. The porcupine files end with .ppn and rhino with .rhn. After downloading the file copy the path to these files and paste them in the right place in the voice-assis.py file. With the voice_ass function in this file you will get the understood wakewords and situations as return.
+Just a sidenote but this voice-assistant doens't need any wifi once you have downloaded the models.
+
+The artificial voice script speaks for its own. Enter a string of whatever you want it to say in the speak function. You can adjust the voice inside the function if needed. This is wel explained in the comments.
